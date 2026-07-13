@@ -1,6 +1,10 @@
 name: HelloWorld123
 
-on: [push, pull_request]
+on: 
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   hello-job:
@@ -8,5 +12,8 @@ jobs:
     steps:
       - name: Run a one-lone script
         run: echo "Hello Github Actions!"
- 
+  second-job:
+    runs-on: windows-latest
+    steps:
+      - run: echo "this job is running on ${{runner.os}}"
       
