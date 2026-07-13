@@ -1,0 +1,12 @@
+name: HelloWorld123
+
+on: [push, pull_request]
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-lone script
+        run: echo "Hello Github Actions!"
+ 
+      
